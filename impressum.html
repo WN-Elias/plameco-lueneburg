@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum – Plameco Spanndecken Lüneburg</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #B8922A; --gold-bg: #F5EDD8; --cream: #FAFAF7; --cream-2: #F3F0E8;
+      --white: #FFFFFF; --dark: #1C1C1A; --text: #1C1C1A; --text-2: #4A4A47;
+      --text-3: #7A7A77; --border: rgba(0,0,0,0.09);
+      --radius: 8px; --radius-lg: 16px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--text); line-height: 1.7; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.97); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 5%;
+      height: 68px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { text-decoration: none; display: flex; flex-direction: column; line-height: 1.2; }
+    .nav-logo-main { font-size: 14px; font-weight: 700; color: var(--dark); letter-spacing: 0.3px; }
+    .nav-logo-sub  { font-size: 10px; color: var(--text-3); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 1px; }
+    .nav-back {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 14px; color: var(--text-2); text-decoration: none;
+      transition: color .2s;
+    }
+    .nav-back:hover { color: var(--gold); }
+
+    .page-hero {
+      background: var(--cream); padding: 64px 5% 56px;
+      border-bottom: 1px solid var(--border);
+    }
+    .page-hero-inner { max-width: 860px; margin: 0 auto; }
+    .page-tag { font-size: 11px; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 12px; }
+    .page-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 4vw, 48px); font-weight: 700;
+      color: var(--dark); line-height: 1.15; letter-spacing: -0.5px;
+    }
+
+    .content { max-width: 860px; margin: 0 auto; padding: 64px 5% 96px; }
+
+    .legal-section { margin-bottom: 48px; }
+    .legal-section:last-child { margin-bottom: 0; }
+
+    .legal-h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 700; color: var(--dark);
+      margin-bottom: 20px; padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .legal-h3 {
+      font-size: 15px; font-weight: 600; color: var(--dark);
+      margin-bottom: 10px; margin-top: 24px;
+    }
+    .legal-p {
+      font-size: 15px; color: var(--text-2); line-height: 1.8; margin-bottom: 12px;
+    }
+    .legal-p:last-child { margin-bottom: 0; }
+    .legal-p a { color: var(--gold); text-decoration: none; }
+    .legal-p a:hover { text-decoration: underline; }
+
+    .info-card {
+      background: var(--cream); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 28px 32px;
+      margin-bottom: 32px;
+    }
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .info-item-label { font-size: 11px; font-weight: 600; color: var(--text-3); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+    .info-item-val { font-size: 15px; color: var(--dark); font-weight: 500; line-height: 1.6; }
+    .info-item-val a { color: var(--gold); text-decoration: none; }
+
+    .disclaimer-box {
+      background: var(--gold-bg); border: 1px solid rgba(184,146,42,0.2);
+      border-radius: var(--radius-lg); padding: 24px 28px; margin-top: 16px;
+    }
+    .disclaimer-box p { font-size: 14px; color: var(--text-2); line-height: 1.75; }
+
+    footer { background: var(--cream-2); border-top: 1px solid var(--border); padding: 32px 5%; }
+    .footer-bottom {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+    }
+    .footer-copy { font-size: 12px; color: var(--text-3); }
+    .footer-links-row { display: flex; gap: 20px; }
+    .footer-links-row a { font-size: 12px; color: var(--text-3); text-decoration: none; transition: color .2s; }
+    .footer-links-row a:hover { color: var(--dark); }
+
+    @media (max-width: 600px) {
+      .info-grid { grid-template-columns: 1fr; }
+      .content { padding: 40px 5% 64px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-main">Plameco Lüneburg</span>
+      <span class="nav-logo-sub">Dahms Maler · Spanndecken</span>
+    </a>
+    <a href="index.html" class="nav-back">← Zurück zur Startseite</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="page-tag">Rechtliches</span>
+    <h1 class="page-title">Impressum</h1>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="legal-section">
+    <h2 class="legal-h2">Angaben gemäß § 5 TMG</h2>
+    <div class="info-card">
+      <div class="info-grid">
+        <div>
+          <div class="info-item-label">Unternehmen</div>
+          <div class="info-item-val">PLAMECO Systems BV</div>
+        </div>
+        <div>
+          <div class="info-item-label">Geschäftsführer</div>
+          <div class="info-item-val">J. Spanjers</div>
+        </div>
+        <div>
+          <div class="info-item-label">Adresse</div>
+          <div class="info-item-val">Van Voordenpark 20<br/>5301 KP Zaltbommel<br/>Niederlande</div>
+        </div>
+        <div>
+          <div class="info-item-label">Lokaler Standort</div>
+          <div class="info-item-val">Walter-Bötcher-Straße 13<br/>21337 Lüneburg<br/>Deutschland</div>
+        </div>
+        <div>
+          <div class="info-item-label">Telefon</div>
+          <div class="info-item-val">
+            <a href="tel:+4902821748301">+49 (0) 2821 7483015</a><br/>
+            <a href="tel:041318540452">04131 854 04 52</a> (Lüneburg)
+          </div>
+        </div>
+        <div>
+          <div class="info-item-label">Fax</div>
+          <div class="info-item-val">+31 (0) 418 575 049</div>
+        </div>
+        <div>
+          <div class="info-item-label">E-Mail</div>
+          <div class="info-item-val">
+            <a href="mailto:info@plameco.nl">info@plameco.nl</a><br/>
+            <a href="mailto:plameco@dahms-maler.de">plameco@dahms-maler.de</a> (Lüneburg)
+          </div>
+        </div>
+        <div>
+          <div class="info-item-label">Website</div>
+          <div class="info-item-val"><a href="https://www.plameco.de" target="_blank">www.plameco.de</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="legal-section">
+    <h2 class="legal-h2">Registereintrag & Steuer</h2>
+    <div class="info-card">
+      <div class="info-grid">
+        <div>
+          <div class="info-item-label">Handelsregister</div>
+          <div class="info-item-val">Eindhoven (Niederlande)<br/>Eintrag Nr. 30258125</div>
+        </div>
+        <div>
+          <div class="info-item-label">USt-IdNr.</div>
+          <div class="info-item-val">NL8206.08.439.B01</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="legal-section">
+    <h2 class="legal-h2">Haftungsausschluss</h2>
+
+    <h3 class="legal-h3">Haftung für Inhalte</h3>
+    <p class="legal-p">Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+    <p class="legal-p">Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+
+    <h3 class="legal-h3">Haftung für Links</h3>
+    <p class="legal-p">Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
+    <p class="legal-p">Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+
+    <div class="disclaimer-box">
+      <p>Bitte beachten Sie: Gegenüber PLAMECO können in keiner Weise Ansprüche gestellt werden, wenn Informationen dieser Website für Zwecke verwendet werden, die das Unternehmen nicht kontrollieren kann. Dies gilt insbesondere für Inhalte Dritter und verlinkte externe Seiten.</p>
+    </div>
+  </div>
+
+  <div class="legal-section">
+    <h2 class="legal-h2">Urheberrecht</h2>
+    <p class="legal-p">Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+    <p class="legal-p">Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2 class="legal-h2">Bewertungen</h2>
+    <p class="legal-p">Bewertungen auf dieser Website werden auf Authentizität überprüft. Gefälschte Bewertungen werden entfernt. Nur echte Kunden, die unsere Leistungen tatsächlich in Anspruch genommen haben, sind berechtigt, Bewertungen abzugeben.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2 class="legal-h2">Verantwortlich für den Inhalt</h2>
+    <div class="info-card">
+      <div class="info-item-label" style="margin-bottom:8px">Verantwortlich gemäß § 55 Abs. 2 RStV</div>
+      <div class="info-item-val">PLAMECO Systems BV<br/>Van Voordenpark 20, 5301 KP Zaltbommel, Niederlande</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2024 Plameco Spanndecken Lüneburg · Dahms Maler</span>
+    <div class="footer-links-row">
+      <a href="index.html">Startseite</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

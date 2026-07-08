@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plameco Spanndecken Lüneburg – Neue Decke in 1 Tag</title>
+  <meta name="description" content="Plameco Spanndecken Lüneburg – Professionelle Montage in einem Tag. Kostenlose Beratung. 04131 8540452. Ihr Spezialist für Spanndecken in Lüneburg." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold:       #B8922A;
+      --gold-light: #D4AA4A;
+      --gold-bg:    #F5EDD8;
+      --cream:      #FAFAF7;
+      --cream-2:    #F3F0E8;
+      --cream-3:    #EAE5D8;
+      --white:      #FFFFFF;
+      --dark:       #1C1C1A;
+      --dark-2:     #2E2E2B;
+      --text:       #1C1C1A;
+      --text-2:     #4A4A47;
+      --text-3:     #7A7A77;
+      --border:     rgba(0,0,0,0.09);
+      --border-2:   rgba(0,0,0,0.14);
+      --radius:     8px;
+      --radius-lg:  16px;
+      --radius-xl:  24px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 5%;
+      height: 68px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { display: flex; flex-direction: column; line-height: 1.2; text-decoration: none; }
+    .nav-logo-main { font-size: 14px; font-weight: 700; color: var(--dark); letter-spacing: 0.3px; }
+    .nav-logo-sub  { font-size: 10px; color: var(--text-3); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 1px; }
+    .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+    .nav-links a { text-decoration: none; color: var(--text-2); font-size: 14px; font-weight: 400; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: var(--dark) !important; color: var(--white) !important;
+      padding: 9px 18px !important; border-radius: var(--radius) !important;
+      font-weight: 600 !important; font-size: 13px !important;
+      transition: background .2s !important;
+    }
+    .nav-cta:hover { background: var(--gold) !important; }
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; background: none; border: none; padding: 4px;
+    }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--dark); border-radius: 2px; }
+    .mobile-menu {
+      display: none; position: fixed; top: 68px; left: 0; right: 0;
+      background: var(--white); border-bottom: 1px solid var(--border);
+      padding: 20px 5%; z-index: 99; flex-direction: column; gap: 16px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { text-decoration: none; color: var(--text-2); font-size: 16px; padding: 8px 0; border-bottom: 1px solid var(--border); }
+    .mobile-menu a:last-child { color: var(--gold); font-weight: 600; border: none; }
+
+    /* ── HERO ── */
+    .hero {
+      padding-top: 68px; min-height: 100vh;
+      display: grid; grid-template-columns: 1fr 1fr;
+      background: var(--cream);
+    }
+    .hero-left {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 80px 5% 80px 10%;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold-bg); border: 1px solid rgba(184,146,42,0.25);
+      padding: 6px 14px; border-radius: 100px; margin-bottom: 28px;
+      font-size: 12px; color: var(--gold); font-weight: 600; letter-spacing: 0.3px;
+      width: fit-content;
+    }
+    .hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(38px, 4.5vw, 64px);
+      font-weight: 700; line-height: 1.1; color: var(--dark);
+      margin-bottom: 24px; letter-spacing: -1px;
+    }
+    .hero h1 em { font-style: normal; color: var(--gold); }
+    .hero-sub { font-size: 17px; color: var(--text-2); line-height: 1.75; margin-bottom: 40px; max-width: 460px; }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+    .btn-dark {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--dark); color: var(--white);
+      padding: 15px 28px; border-radius: var(--radius); font-weight: 600;
+      font-size: 15px; text-decoration: none; transition: all .2s; border: none; cursor: pointer;
+    }
+    .btn-dark:hover { background: var(--gold); transform: translateY(-1px); }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: var(--text);
+      padding: 14px 24px; border-radius: var(--radius); font-weight: 500;
+      font-size: 15px; text-decoration: none; transition: all .2s;
+      border: 1.5px solid var(--border-2);
+    }
+    .btn-outline:hover { border-color: var(--dark); color: var(--dark); }
+    .hero-stats {
+      display: flex; gap: 32px; margin-top: 52px; padding-top: 40px;
+      border-top: 1px solid var(--border);
+    }
+    .hstat-num { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: var(--dark); line-height: 1; margin-bottom: 4px; }
+    .hstat-label { font-size: 11px; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.5px; }
+    .hero-right { position: relative; overflow: hidden; }
+    .hero-img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      min-height: 600px;
+    }
+    .hero-img-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, rgba(250,250,247,0.12) 0%, transparent 40%);
+    }
+    .hero-float {
+      position: absolute; bottom: 40px; left: -20px;
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 16px 20px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+      min-width: 180px;
+    }
+    .hero-float-label { font-size: 10px; color: var(--text-3); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+    .hero-float-val { font-size: 20px; font-weight: 700; color: var(--dark); }
+    .hero-float-sub { font-size: 11px; color: var(--text-3); margin-top: 2px; }
+
+    /* ── SHARED ── */
+    section { padding: 96px 5%; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-tag { display: inline-block; font-size: 11px; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 14px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 3.5vw, 44px); font-weight: 700; color: var(--dark); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 16px; }
+    .section-title em { font-style: normal; color: var(--gold); }
+    .section-sub { font-size: 17px; color: var(--text-2); max-width: 600px; line-height: 1.75; }
+
+    /* ── VORTEILE ── */
+    .vorteile { background: var(--white); }
+    .vorteile-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+      margin-top: 56px; border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden;
+    }
+    .vorteil-card {
+      padding: 36px 28px; background: var(--white);
+      border-right: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      transition: background .25s;
+    }
+    .vorteil-card:hover { background: var(--cream); }
+    .vorteil-icon { font-size: 28px; margin-bottom: 16px; }
+    .vorteil-title { font-size: 16px; font-weight: 600; color: var(--dark); margin-bottom: 8px; }
+    .vorteil-desc { font-size: 14px; color: var(--text-2); line-height: 1.7; }
+    .gold-line { width: 32px; height: 2px; background: var(--gold); margin-bottom: 16px; }
+
+    /* ── GALERIE ── */
+    .galerie { background: var(--cream); padding-bottom: 96px; }
+    .galerie-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; flex-wrap: wrap; gap: 20px; }
+    .galerie-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+    .galerie-item { border-radius: var(--radius-lg); overflow: hidden; position: relative; cursor: pointer; }
+    .galerie-item:nth-child(1) { grid-column: span 7; }
+    .galerie-item:nth-child(2) { grid-column: span 5; }
+    .galerie-item:nth-child(3) { grid-column: span 5; }
+    .galerie-item:nth-child(4) { grid-column: span 7; }
+    .galerie-img {
+      width: 100%; height: 340px; object-fit: cover; display: block;
+      transition: transform .5s ease;
+    }
+    .galerie-item:hover .galerie-img { transform: scale(1.04); }
+    .galerie-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(28,28,26,0.75) 0%, transparent 55%);
+      opacity: 0; transition: opacity .3s; display: flex; align-items: flex-end; padding: 20px 24px;
+    }
+    .galerie-item:hover .galerie-overlay { opacity: 1; }
+    .galerie-label { font-size: 14px; font-weight: 500; color: #fff; }
+
+    /* ── LEISTUNGEN ── */
+    .leistungen { background: var(--white); }
+    .leistungen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
+    .leistung-card {
+      border: 1px solid var(--border); border-radius: var(--radius-lg);
+      overflow: hidden; transition: border-color .3s, transform .3s;
+    }
+    .leistung-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+    .leistung-num-tag { font-size: 10px; color: var(--gold); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+    .leistung-body { padding: 28px; }
+    .leistung-title { font-size: 18px; font-weight: 600; color: var(--dark); margin-bottom: 10px; }
+    .leistung-desc { font-size: 14px; color: var(--text-2); line-height: 1.7; margin-bottom: 18px; }
+    .leistung-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .leistung-list li { display: flex; align-items: flex-start; gap: 9px; font-size: 13px; color: var(--text-2); }
+    .leistung-list li::before { content: ''; width: 5px; height: 5px; background: var(--gold); border-radius: 50%; flex-shrink: 0; margin-top: 6px; }
+    .leistung-img-wrap { height: 200px; overflow: hidden; }
+    .leistung-img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* ── BEWERTUNGEN ── */
+    .bewertungen { background: var(--cream); }
+    .bew-header { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; margin-bottom: 48px; }
+    .rating-box {
+      background: var(--dark); color: var(--white);
+      border-radius: var(--radius-lg); padding: 32px 40px; text-align: center; min-width: 200px;
+    }
+    .rating-num { font-family: 'Playfair Display', serif; font-size: 60px; font-weight: 700; color: var(--gold-light); line-height: 1; }
+    .rating-stars { font-size: 20px; margin: 8px 0; }
+    .rating-lbl { font-size: 12px; color: rgba(255,255,255,0.6); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .review-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 28px; transition: border-color .3s;
+    }
+    .review-card:hover { border-color: var(--gold); }
+    .review-top { display: flex; justify-content: space-between; margin-bottom: 16px; }
+    .reviewer-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--gold-bg); display: flex; align-items: center; justify-content: center;
+      font-size: 15px; font-weight: 700; color: var(--gold);
+    }
+    .reviewer-name { font-size: 15px; font-weight: 600; color: var(--dark); }
+    .reviewer-meta { font-size: 12px; color: var(--text-3); margin-top: 2px; }
+    .review-stars { font-size: 14px; }
+    .review-text { font-size: 14px; color: var(--text-2); line-height: 1.75; }
+    .review-source { margin-top: 16px; display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text-3); }
+    .gdot { width: 16px; height: 16px; border-radius: 50%; background: #4285F4; color: #fff; font-size: 10px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; }
+
+    /* ── PROZESS ── */
+    .prozess { background: var(--dark); }
+    .prozess .section-tag { color: var(--gold-light); }
+    .prozess .section-title { color: var(--white); }
+    .prozess .section-sub { color: rgba(255,255,255,0.6); }
+    .prozess-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 56px; }
+    .prozess-step { padding: 0 24px; position: relative; }
+    .prozess-step:not(:last-child)::after {
+      content: ''; position: absolute; top: 27px; right: -1px;
+      width: 2px; height: 28px;
+      background: rgba(255,255,255,0.1);
+    }
+    .step-num {
+      width: 56px; height: 56px; border-radius: 50%;
+      border: 1.5px solid rgba(184,146,42,0.4);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--gold-light);
+      margin-bottom: 20px;
+    }
+    .step-title { font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 10px; }
+    .step-desc { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.7; }
+
+    /* ── FAQ ── */
+    .faq { background: var(--white); }
+    .faq-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; margin-top: 56px; }
+    .faq-list { display: flex; flex-direction: column; gap: 10px; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+    .faq-item.open { border-color: var(--gold); }
+    .faq-q {
+      width: 100%; text-align: left; background: none; border: none;
+      padding: 20px 24px; font-size: 15px; font-weight: 500; color: var(--dark);
+      font-family: inherit; cursor: pointer; display: flex; justify-content: space-between;
+      align-items: center; gap: 16px; transition: color .2s;
+    }
+    .faq-q:hover { color: var(--gold); }
+    .faq-icon {
+      width: 22px; height: 22px; border-radius: 50%;
+      background: var(--cream-2); display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 14px; color: var(--text-2); transition: transform .3s;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--gold-bg); color: var(--gold); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height .4s ease; }
+    .faq-item.open .faq-a { max-height: 300px; }
+    .faq-a-inner {
+      padding: 0 24px 20px; font-size: 14px; color: var(--text-2);
+      line-height: 1.75; border-top: 1px solid var(--border); padding-top: 14px;
+    }
+    .faq-contact { margin-top: 40px; display: flex; flex-direction: column; gap: 12px; }
+
+    /* ── KONTAKT ── */
+    .kontakt { background: var(--cream); }
+    .kontakt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-top: 56px; align-items: start; }
+    .kontakt-items { display: flex; flex-direction: column; gap: 28px; }
+    .ki { display: flex; gap: 16px; align-items: flex-start; }
+    .ki-icon {
+      width: 48px; height: 48px; background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius); display: flex; align-items: center; justify-content: center;
+      font-size: 20px; flex-shrink: 0;
+    }
+    .ki-label { font-size: 11px; color: var(--text-3); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+    .ki-val { font-size: 16px; color: var(--dark); font-weight: 500; }
+    .ki-val a { color: var(--gold); text-decoration: none; }
+    .ki-val a:hover { color: var(--dark); }
+    .ki-sub { font-size: 13px; color: var(--text-3); margin-top: 2px; }
+    .region-box {
+      margin-top: 16px; padding: 20px; background: var(--white);
+      border: 1px solid var(--border); border-radius: var(--radius-lg);
+    }
+    .region-box-label { font-size: 11px; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+    .region-box-text { font-size: 13px; color: var(--text-2); line-height: 1.75; }
+    .form-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-xl); padding: 40px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.05);
+    }
+    .form-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--dark); margin-bottom: 6px; }
+    .form-sub { font-size: 14px; color: var(--text-3); margin-bottom: 28px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .form-group label { font-size: 12px; font-weight: 600; color: var(--text-2); text-transform: uppercase; letter-spacing: 0.5px; }
+    .form-group input, .form-group select, .form-group textarea {
+      background: var(--cream); border: 1.5px solid var(--border);
+      border-radius: var(--radius); padding: 12px 14px; font-size: 14px;
+      color: var(--dark); font-family: inherit; outline: none; width: 100%;
+      transition: border-color .2s;
+    }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-3); }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); background: var(--white); }
+    .form-group select { appearance: none; cursor: pointer; }
+    .form-group textarea { resize: vertical; min-height: 90px; }
+    .form-submit {
+      width: 100%; padding: 15px; background: var(--dark); color: var(--white);
+      border: none; border-radius: var(--radius); font-size: 15px; font-weight: 600;
+      font-family: inherit; cursor: pointer; transition: all .2s; margin-top: 4px;
+    }
+    .form-submit:hover { background: var(--gold); }
+    .form-note { text-align: center; font-size: 11px; color: var(--text-3); margin-top: 12px; }
+    .form-success { display: none; text-align: center; padding: 48px 20px; }
+    .form-success.visible { display: block; }
+    .success-icon { font-size: 48px; margin-bottom: 16px; }
+
+    /* ── CTA BANNER ── */
+    .cta-banner {
+      background: var(--dark); padding: 80px 5%; text-align: center;
+    }
+    .cta-banner h2 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 4vw, 44px); font-weight: 700; color: var(--white); margin-bottom: 14px; }
+    .cta-banner p { font-size: 17px; color: rgba(255,255,255,0.6); margin-bottom: 36px; }
+    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-gold {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold); color: var(--white);
+      padding: 15px 28px; border-radius: var(--radius); font-weight: 600;
+      font-size: 15px; text-decoration: none; transition: all .2s;
+    }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .btn-white-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: var(--white);
+      padding: 14px 24px; border-radius: var(--radius); font-weight: 500;
+      font-size: 15px; text-decoration: none; transition: all .2s;
+      border: 1.5px solid rgba(255,255,255,0.25);
+    }
+    .btn-white-outline:hover { border-color: rgba(255,255,255,0.6); }
+
+    /* ── FOOTER ── */
+    footer { background: var(--cream-2); border-top: 1px solid var(--border); padding: 56px 5% 32px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 40px; }
+    .footer-brand { font-size: 14px; font-weight: 700; color: var(--dark); text-transform: uppercase; letter-spacing: 0.3px; }
+    .footer-brand-sub { font-size: 10px; color: var(--text-3); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 14px; margin-top: 2px; }
+    .footer-desc { font-size: 14px; color: var(--text-2); line-height: 1.7; max-width: 280px; }
+    .footer-col-title { font-size: 10px; font-weight: 700; color: var(--text-3); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 18px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { text-decoration: none; font-size: 14px; color: var(--text-2); transition: color .2s; }
+    .footer-links a:hover { color: var(--dark); }
+    .footer-bottom {
+      display: flex; justify-content: space-between; align-items: center;
+      padding-top: 24px; border-top: 1px solid var(--border); flex-wrap: wrap; gap: 10px;
+    }
+    .footer-copy { font-size: 12px; color: var(--text-3); }
+    .footer-plameco { font-size: 12px; color: var(--text-3); }
+    .footer-plameco a { color: var(--gold); text-decoration: none; }
+
+    /* ── STICKY ── */
+    .phone-sticky { position: fixed; bottom: 24px; right: 24px; z-index: 50; }
+    .phone-btn {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--dark); color: var(--white);
+      padding: 13px 22px; border-radius: 100px; text-decoration: none;
+      font-weight: 600; font-size: 14px;
+      box-shadow: 0 8px 32px rgba(28,28,26,0.25);
+      transition: all .2s;
+    }
+    .phone-btn:hover { background: var(--gold); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(184,146,42,0.35); }
+    .phone-pulse { width: 8px; height: 8px; background: #4ade80; border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.75)} }
+
+    /* ── REVEAL ── */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-right { display: none; }
+      .hero-left { padding: 80px 5%; text-align: center; }
+      .hero-sub { max-width: none; }
+      .hero-btns { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .hero-badge { margin-left: auto; margin-right: auto; }
+      .leistungen-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      section { padding: 64px 5%; }
+      .vorteile-grid { grid-template-columns: 1fr; }
+      .galerie-grid { grid-template-columns: 1fr; }
+      .galerie-item:nth-child(n) { grid-column: span 1; }
+      .leistungen-grid { grid-template-columns: 1fr; }
+      .bew-header { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .prozess-steps { grid-template-columns: 1fr 1fr; }
+      .faq-layout { grid-template-columns: 1fr; }
+      .kontakt-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      .form-row { grid-template-columns: 1fr; }
+      .phone-btn span.ph-label { display: none; }
+      .phone-btn { padding: 14px; border-radius: 50%; width: 52px; height: 52px; justify-content: center; }
+    }
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 34px; }
+      .prozess-steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <span class="nav-logo-main">Plameco Lüneburg</span>
+      <span class="nav-logo-sub">Dahms Maler · Spanndecken</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#galerie">Galerie</a></li>
+      <li><a href="#bewertungen">Bewertungen</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#kontakt" class="nav-cta">Beratung anfragen</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#leistungen" onclick="closeMenu()">Leistungen</a>
+  <a href="#galerie" onclick="closeMenu()">Galerie</a>
+  <a href="#bewertungen" onclick="closeMenu()">Bewertungen</a>
+  <a href="#faq" onclick="closeMenu()">FAQ</a>
+  <a href="#kontakt" onclick="closeMenu()">Beratung anfragen</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="start">
+  <div class="hero-left">
+    <div class="hero-badge">Ihr Plameco-Partner in Lüneburg</div>
+    <h1>Neue Decke.<br/><em>In einem Tag.</em></h1>
+    <p class="hero-sub">Professionelle Spanndecken für Ihr Zuhause oder Büro – ohne Dreck, ohne Lärm. Möbel bleiben stehen. Fertig, bevor der Tag endet.</p>
+    <div class="hero-btns">
+      <a href="#kontakt" class="btn-dark">Kostenlose Beratung →</a>
+      <a href="tel:041318540452" class="btn-outline">📞 04131 854 04 52</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="hstat-num">1 Tag</div><div class="hstat-label">Montage</div></div>
+      <div><div class="hstat-num">40+</div><div class="hstat-label">Jahre</div></div>
+      <div><div class="hstat-num">5,0 ★</div><div class="hstat-label">Google</div></div>
+      <div><div class="hstat-num">100%</div><div class="hstat-label">Zufriedenheit</div></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="img/raum1.png" alt="Moderner Wohnraum mit Spanndecke" class="hero-img" />
+    <div class="hero-img-overlay"></div>
+    <div class="hero-float">
+      <div class="hero-float-label">Fertig in</div>
+      <div class="hero-float-val">einem Tag ✓</div>
+      <div class="hero-float-sub">Möbel bleiben stehen</div>
+    </div>
+  </div>
+</section>
+
+<!-- VORTEILE -->
+<section class="vorteile" id="vorteile">
+  <div class="section-inner">
+    <div class="reveal">
+      <span class="section-tag">Warum Plameco?</span>
+      <h2 class="section-title">Einfacher geht's <em>wirklich nicht</em></h2>
+      <p class="section-sub">Von der Beratung bis zur fertigen Decke kümmern wir uns um alles. Sie müssen sich um nichts sorgen.</p>
+    </div>
+    <div class="vorteile-grid">
+      <div class="vorteil-card reveal">
+        <div class="gold-line"></div>
+        <div class="vorteil-icon">⚡</div>
+        <div class="vorteil-title">Montage in 1 Tag</div>
+        <div class="vorteil-desc">Vom ersten Handgriff bis zur fertigen Decke – alles an einem einzigen Tag. Kein wochenlanger Umbau.</div>
+      </div>
+      <div class="vorteil-card reveal">
+        <div class="gold-line"></div>
+        <div class="vorteil-icon">🛋️</div>
+        <div class="vorteil-title">Möbel bleiben stehen</div>
+        <div class="vorteil-desc">Kein aufwendiges Ausräumen. Ihre Einrichtung bleibt exakt dort, wo sie ist – maximale Bequemlichkeit.</div>
+      </div>
+      <div class="vorteil-card reveal">
+        <div class="gold-line"></div>
+        <div class="vorteil-icon">✨</div>
+        <div class="vorteil-title">Kein Staub, kein Dreck</div>
+        <div class="vorteil-desc">Die Montage ist sauber und geräuscharm. Wir hinterlassen Ihren Raum makellos – nur mit neuer Decke.</div>
+      </div>
+      <div class="vorteil-card reveal">
+        <div class="gold-line"></div>
+        <div class="vorteil-icon">🎨</div>
+        <div class="vorteil-title">Maßgefertigt</div>
+        <div class="vorteil-desc">Jede Decke wird individuell für Ihren Raum angefertigt – in über 100 Farben, Oberflächen und Designs.</div>
+      </div>
+      <div class="vorteil-card reveal">
+        <div class="gold-line"></div>
+        <div class="vorteil-icon">🏆</div>
+        <div class="vorteil-title">Malermeisterbetrieb</div>
+        <div class="vorteil-desc">Zertifizierter Handwerksbetrieb in 4. Generation – höchste handwerkliche Qualität und Verlässlichkeit.</div>
+      </div>
+      <div class="vorteil-card reveal">
+        <div class="gold-line"></div>
+        <div class="vorteil-icon">📍</div>
+        <div class="vorteil-title">Lokal aus Lüneburg</div>
+        <div class="vorteil-desc">Kurze Wege, persönliche Beratung und schnelle Termine – direkt vor Ort in Lüneburg und der Region.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIE -->
+<section class="galerie" id="galerie">
+  <div class="section-inner">
+    <div class="galerie-head reveal">
+      <div>
+        <span class="section-tag">Unsere Projekte</span>
+        <h2 class="section-title">Ergebnisse, <em>die begeistern</em></h2>
+        <p class="section-sub">Echte Projekte unserer Kunden aus Lüneburg und Umgebung.</p>
+      </div>
+    </div>
+    <div class="galerie-grid">
+      <div class="galerie-item reveal">
+        <img src="img/raum1.png" alt="Esszimmer mit weißer Spanndecke" class="galerie-img" />
+        <div class="galerie-overlay"><span class="galerie-label">Esszimmer · Weiß Satin · Lüneburg</span></div>
+      </div>
+      <div class="galerie-item reveal">
+        <img src="img/raum2.png" alt="Wohnzimmer mit LED-Spanndecke" class="galerie-img" />
+        <div class="galerie-overlay"><span class="galerie-label">Wohnzimmer · LED-Beleuchtung</span></div>
+      </div>
+      <div class="galerie-item reveal">
+        <img src="img/raum3.png" alt="Offener Wohnbereich mit Spanndecke" class="galerie-img" />
+        <div class="galerie-overlay"><span class="galerie-label">Offener Wohnbereich · Mattes Finish</span></div>
+      </div>
+      <div class="galerie-item reveal">
+        <img src="img/raum4.png" alt="Modernes Wohnzimmer mit Spanndecke" class="galerie-img" />
+        <div class="galerie-overlay"><span class="galerie-label">Wohnzimmer · Modern & Elegant</span></div>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:32px;font-size:14px;color:var(--text-3);">Weitere Projekte zeigen wir Ihnen gerne beim persönlichen Beratungsgespräch.</p>
+  </div>
+</section>
+
+<!-- LEISTUNGEN -->
+<section class="leistungen" id="leistungen">
+  <div class="section-inner">
+    <div class="reveal">
+      <span class="section-tag">Leistungen</span>
+      <h2 class="section-title">Alles aus <em>einer Hand</em></h2>
+      <p class="section-sub">Von der klassischen Spanndecke bis zur integrierten LED-Heizung – komplette Lösungen für jeden Raum.</p>
+    </div>
+    <div class="leistungen-grid">
+      <div class="leistung-card reveal">
+        <div class="leistung-img-wrap">
+          <img src="img/raum3.png" alt="Spanndecke" class="leistung-img" />
+        </div>
+        <div class="leistung-body">
+          <div class="leistung-num-tag">01 · Kernleistung</div>
+          <h3 class="leistung-title">Spanndecken</h3>
+          <p class="leistung-desc">Die elegante Alternative zur Deckenrenovierung – schnell, sauber und in unzähligen Varianten.</p>
+          <ul class="leistung-list">
+            <li>Matt, glänzend oder satin</li>
+            <li>Über 100 Farben & Texturen</li>
+            <li>Feuchtigkeitsresistent</li>
+            <li>Wohnraum, Küche & Bad</li>
+          </ul>
+        </div>
+      </div>
+      <div class="leistung-card reveal">
+        <div class="leistung-img-wrap">
+          <img src="img/raum2.png" alt="LED Beleuchtung" class="leistung-img" />
+        </div>
+        <div class="leistung-body">
+          <div class="leistung-num-tag">02 · Beleuchtung</div>
+          <h3 class="leistung-title">LED-Konzepte</h3>
+          <p class="leistung-desc">Integrierte LED-Systeme direkt in die Spanndecke – von Ambiente bis Tageslicht.</p>
+          <ul class="leistung-list">
+            <li>Raumfüllend & Effekt-LED</li>
+            <li>Biodynamisches Tageslicht</li>
+            <li>Dimmbar & Smart-Home-fähig</li>
+            <li>Energieeffizient</li>
+          </ul>
+        </div>
+      </div>
+      <div class="leistung-card reveal">
+        <div class="leistung-img-wrap">
+          <img src="img/raum4.png" alt="Akustik und Heizung" class="leistung-img" />
+        </div>
+        <div class="leistung-body">
+          <div class="leistung-num-tag">03 · Extras</div>
+          <h3 class="leistung-title">Akustik & Heizung</h3>
+          <p class="leistung-desc">Schallschutz und unsichtbare Infrarot-Heizung – integriert in Ihre Spanndecke.</p>
+          <ul class="leistung-list">
+            <li>Schallabsorbierende Materialien</li>
+            <li>Infrarot-Heizung integriert</li>
+            <li>Foto-Spanndecken auf Wunsch</li>
+            <li>Malerarbeiten kombinierbar</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEWERTUNGEN -->
+<section class="bewertungen" id="bewertungen">
+  <div class="section-inner">
+    <div class="bew-header reveal">
+      <div>
+        <span class="section-tag">Kundenstimmen</span>
+        <h2 class="section-title">Was unsere Kunden <em>sagen</em></h2>
+        <p class="section-sub">Echte Bewertungen – überzeugen Sie sich selbst.</p>
+      </div>
+      <div class="rating-box">
+        <div class="rating-num">5,0</div>
+        <div class="rating-stars">⭐⭐⭐⭐⭐</div>
+        <div class="rating-lbl">Google · Lüneburg</div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-top">
+          <div style="display:flex;align-items:center;gap:12px">
+            <div class="reviewer-avatar">JM</div>
+            <div>
+              <div class="reviewer-name">Joachim Meyer</div>
+              <div class="reviewer-meta">Local Guide · vor einem Jahr</div>
+            </div>
+          </div>
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        </div>
+        <p class="review-text">„Von der Planung bis zur Durchführung wurde das gesamte Projekt zu unserer äußersten Zufriedenheit umgesetzt. Besonders hervorheben möchte ich die saubere und präzise Arbeit des Teams."</p>
+        <div class="review-source"><div class="gdot">G</div>Verifizierte Google-Bewertung</div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-top">
+          <div style="display:flex;align-items:center;gap:12px">
+            <div class="reviewer-avatar">MS</div>
+            <div>
+              <div class="reviewer-name">Michael Schwalbe</div>
+              <div class="reviewer-meta">vor 3 Jahren</div>
+            </div>
+          </div>
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        </div>
+        <p class="review-text">„Wir waren mit der Arbeit dieser Firma sehr zufrieden. Die Malerarbeiten und Montage der Spanndecke erfolgte professionell, sauber und pünktlich. Ein tolles Team vom Monteur bis Chef."</p>
+        <div class="review-source"><div class="gdot">G</div>Verifizierte Google-Bewertung</div>
+      </div>
+      <div class="review-card reveal" style="border-color:rgba(184,146,42,0.3);background:var(--gold-bg);">
+        <div style="margin-bottom:16px;font-size:32px">💬</div>
+        <p class="review-text" style="margin-bottom:20px;color:var(--text-2);">Waren Sie zufrieden mit unserer Arbeit? Wir freuen uns über Ihre Bewertung bei Google – das hilft anderen Kunden in Lüneburg.</p>
+        <a href="https://g.page/r/review" target="_blank" class="btn-dark" style="justify-content:center;font-size:13px;padding:11px 20px;">
+          Google-Bewertung schreiben →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROZESS -->
+<section class="prozess">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <span class="section-tag">So einfach geht's</span>
+      <h2 class="section-title">Vier Schritte zu <em>Ihrer neuen Decke</em></h2>
+      <p class="section-sub" style="margin:0 auto">Unkompliziert, schnell und zuverlässig – von der Anfrage bis zur fertigen Montage.</p>
+    </div>
+    <div class="prozess-steps">
+      <div class="prozess-step reveal">
+        <div class="step-num">1</div>
+        <div class="step-title">Anfrage stellen</div>
+        <div class="step-desc">Kontaktieren Sie uns per Formular, Telefon oder E-Mail – wir antworten innerhalb von 24 Stunden.</div>
+      </div>
+      <div class="prozess-step reveal">
+        <div class="step-num">2</div>
+        <div class="step-title">Kostenlose Beratung</div>
+        <div class="step-desc">Wir kommen zu Ihnen – kostenlos, unverbindlich und mit konkreten Gestaltungsvorschlägen.</div>
+      </div>
+      <div class="prozess-step reveal">
+        <div class="step-num">3</div>
+        <div class="step-title">Festpreisangebot</div>
+        <div class="step-desc">Transparentes Angebot ohne versteckte Kosten. Sie entscheiden, wann es losgeht.</div>
+      </div>
+      <div class="prozess-step reveal">
+        <div class="step-num">4</div>
+        <div class="step-title">Montage in 1 Tag</div>
+        <div class="step-desc">Unser Team montiert Ihre Decke sauber, pünktlich und zu Ihrer vollsten Zufriedenheit.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="section-inner">
+    <div class="faq-layout">
+      <div class="reveal">
+        <span class="section-tag">Häufige Fragen</span>
+        <h2 class="section-title">Alles, was Sie <em>wissen möchten</em></h2>
+        <p class="section-sub">Weitere Fragen? Wir beraten Sie gerne persönlich – kostenlos und unverbindlich.</p>
+        <div class="faq-contact">
+          <a href="tel:041318540452" class="btn-dark">📞 04131 854 04 52</a>
+          <a href="mailto:plameco@dahms-maler.de" class="btn-outline">✉️ plameco@dahms-maler.de</a>
+        </div>
+      </div>
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Wie lange dauert die Montage?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">In der Regel ist Ihre neue Spanndecke in einem einzigen Tag fertig montiert – bei normalen Raumgrößen sogar in wenigen Stunden. Bei größeren Projekten erhalten Sie vorab eine genaue Zeitangabe.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Müssen wir Möbel ausräumen?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Nein! Das ist einer der größten Vorteile. Ihre Möbel bleiben während der gesamten Montage genau dort stehen, wo sie sind. Lediglich direkt unter der Decke sollten keine Gegenstände liegen.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Für welche Räume eignet es sich?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Spanndecken eignen sich für nahezu jeden Raum: Wohnzimmer, Schlafzimmer, Küche, Badezimmer, Keller und Büros. Feuchtigkeitsresistente Varianten sind ideal für Küchen und Bäder.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Was kostet eine Spanndecke?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Die Kosten hängen von Raumgröße, Material und Extras (LED, Akustik etc.) ab. Nach einer kostenlosen Beratung erhalten Sie ein transparentes Festpreisangebot – ohne versteckte Kosten.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Gibt es eine Garantie?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Ja! Plameco Spanndecken sind langlebig und werden mit Garantie geliefert. Die genauen Garantiebedingungen besprechen wir bei Ihrer persönlichen Beratung.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Wohin fahren Sie?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Wir sind in Lüneburg und der gesamten Region tätig – Uelzen, Winsen (Luhe), Bad Bevensen, Dannenberg, Dahlenburg, Hitzacker und weitere Orte in der Lüneburger Heide.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <div class="section-inner">
+    <h2 class="reveal">Bereit für Ihre neue Decke?</h2>
+    <p class="reveal">Kostenlose Beratung anfragen – persönlich, unverbindlich und bei Ihnen zu Hause.</p>
+    <div class="cta-btns reveal">
+      <a href="#kontakt" class="btn-gold">Beratung anfragen →</a>
+      <a href="tel:041318540452" class="btn-white-outline">📞 Jetzt anrufen</a>
+    </div>
+  </div>
+</div>
+
+<!-- KONTAKT -->
+<section class="kontakt" id="kontakt">
+  <div class="section-inner">
+    <div class="reveal">
+      <span class="section-tag">Kontakt</span>
+      <h2 class="section-title">Kostenlose <em>Beratung anfragen</em></h2>
+    </div>
+    <div class="kontakt-grid">
+      <div class="reveal">
+        <p style="font-size:16px;color:var(--text-2);line-height:1.8;margin-bottom:32px">Wir freuen uns auf Ihre Anfrage. Rufen Sie uns an oder schreiben Sie uns – wir melden uns innerhalb von 24 Stunden.</p>
+        <div class="kontakt-items">
+          <div class="ki">
+            <div class="ki-icon">📍</div>
+            <div><div class="ki-label">Adresse</div><div class="ki-val">Walter-Bötcher-Straße 13</div><div class="ki-sub">21337 Lüneburg</div></div>
+          </div>
+          <div class="ki">
+            <div class="ki-icon">📞</div>
+            <div><div class="ki-label">Telefon</div><div class="ki-val"><a href="tel:041318540452">04131 854 04 52</a></div><div class="ki-sub">Mo–Do 8:00–15:30 Uhr</div></div>
+          </div>
+          <div class="ki">
+            <div class="ki-icon">✉️</div>
+            <div><div class="ki-label">E-Mail</div><div class="ki-val"><a href="mailto:plameco@dahms-maler.de">plameco@dahms-maler.de</a></div><div class="ki-sub">Antwort innerhalb 24 h</div></div>
+          </div>
+          <div class="ki">
+            <div class="ki-icon">🕐</div>
+            <div><div class="ki-label">Öffnungszeiten</div><div class="ki-val">Mo – Do: 8:00 – 15:30</div><div class="ki-sub">Außerhalb: per E-Mail</div></div>
+          </div>
+        </div>
+        <div class="region-box" style="margin-top:28px">
+          <div class="region-box-label">Einzugsgebiet</div>
+          <div class="region-box-text">Lüneburg · Uelzen · Winsen · Bad Bevensen · Bad Bodenteich · Dannenberg · Dahlenburg · Hitzacker · Gartow und weitere Orte in der Region</div>
+        </div>
+      </div>
+
+      <div class="form-card reveal">
+        <div id="formContent">
+          <div class="form-title">Beratung anfragen</div>
+          <div class="form-sub">Kostenlos & unverbindlich – wir melden uns innerhalb von 24 Stunden.</div>
+          <form onsubmit="submitForm(event)">
+            <div class="form-row">
+              <div class="form-group"><label>Vorname</label><input type="text" placeholder="Max" required /></div>
+              <div class="form-group"><label>Nachname</label><input type="text" placeholder="Mustermann" required /></div>
+            </div>
+            <div class="form-group"><label>Telefon</label><input type="tel" placeholder="04131 123456" required /></div>
+            <div class="form-group"><label>E-Mail (optional)</label><input type="email" placeholder="max@beispiel.de" /></div>
+            <div class="form-group">
+              <label>Gewünschte Leistung</label>
+              <select>
+                <option value="">Bitte wählen...</option>
+                <option>Spanndecke (Standard)</option>
+                <option>Spanndecke mit LED-Beleuchtung</option>
+                <option>Akustik-Spanndecke</option>
+                <option>Infrarot-Heizung integriert</option>
+                <option>Foto-Spanndecke</option>
+                <option>Malerarbeiten</option>
+                <option>Noch unsicher / Beratung gewünscht</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Nachricht (optional)</label><textarea placeholder="Kurze Beschreibung: Raumgröße, Wünsche, Raum..."></textarea></div>
+            <button type="submit" class="form-submit">Beratung anfragen – kostenlos & unverbindlich</button>
+          </form>
+          <div class="form-note">🔒 Ihre Daten werden vertraulich behandelt und nicht weitergegeben.</div>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <div class="success-icon">✅</div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:var(--dark);margin-bottom:12px">Anfrage erhalten!</h3>
+          <p style="color:var(--text-2);font-size:15px;line-height:1.7">Vielen Dank. Wir melden uns innerhalb von 24 Stunden. Bei dringenden Fragen erreichen Sie uns unter <a href="tel:041318540452" style="color:var(--gold)">04131 854 04 52</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Plameco Lüneburg</div>
+        <div class="footer-brand-sub">Dahms Maler · Spanndecken</div>
+        <div class="footer-desc">Ihr zertifizierter Plameco-Partner und Malermeisterbetrieb in Lüneburg seit über 40 Jahren. Spanndecken, LED und mehr – in einem Tag.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Leistungen</div>
+        <ul class="footer-links">
+          <li><a href="#leistungen">Spanndecken</a></li>
+          <li><a href="#leistungen">LED-Beleuchtung</a></li>
+          <li><a href="#leistungen">Akustik-Decken</a></li>
+          <li><a href="#leistungen">Infrarot-Heizung</a></li>
+          <li><a href="#leistungen">Malerarbeiten</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="#vorteile">Vorteile</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#bewertungen">Bewertungen</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Kontakt</div>
+        <ul class="footer-links">
+          <li><a href="tel:041318540452">04131 854 04 52</a></li>
+          <li><a href="mailto:plameco@dahms-maler.de">plameco@dahms-maler.de</a></li>
+          <li style="color:var(--text-3);font-size:14px">Walter-Bötcher-Str. 13</li>
+          <li style="color:var(--text-3);font-size:14px">21337 Lüneburg</li>
+          <li style="color:var(--text-3);font-size:14px">Mo–Do · 8–15:30 Uhr</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2024 Plameco Spanndecken Lüneburg · Dahms Maler GmbH</div>
+      <div class="footer-plameco" style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+        <span>Partner von <a href="https://www.plameco.de" target="_blank">plameco.de</a></span>
+        <a href="impressum.html" style="display:inline-flex;align-items:center;padding:7px 16px;border:1px solid var(--border-2);border-radius:var(--radius);font-size:13px;color:var(--text-2);text-decoration:none;transition:all .2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='var(--border-2)';this.style.color='var(--text-2)'">Impressum</a>
+        <a href="datenschutz.html" style="display:inline-flex;align-items:center;padding:7px 16px;border:1px solid var(--border-2);border-radius:var(--radius);font-size:13px;color:var(--text-2);text-decoration:none;transition:all .2s;" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='var(--border-2)';this.style.color='var(--text-2)'">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- PHONE STICKY -->
+<div class="phone-sticky">
+  <a href="tel:041318540452" class="phone-btn" title="Jetzt anrufen">
+    <span class="phone-pulse"></span>
+    <span>📞</span>
+    <span class="ph-label">04131 854 04 52</span>
+  </a>
+</div>
+
+<script>
+  function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+  function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const open = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!open) item.classList.add('open');
+  }
+  function submitForm(e) {
+    e.preventDefault();
+    document.getElementById('formContent').style.display = 'none';
+    document.getElementById('formSuccess').classList.add('visible');
+  }
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 90);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+</script>
+</body>
+</html>
