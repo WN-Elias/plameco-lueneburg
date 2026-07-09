@@ -80,13 +80,28 @@
 
     /* ── HERO ── */
     .hero {
-      padding-top: 68px; min-height: 100vh;
-      display: grid; grid-template-columns: 1fr 1fr;
+      position: relative; padding-top: 68px; min-height: 100vh;
+      display: flex; align-items: center; overflow: hidden;
       background: var(--cream);
     }
-    .hero-left {
+    .hero-bg {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center; z-index: 0;
+    }
+    .hero-scrim {
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(100deg,
+        var(--cream) 0%, var(--cream) 34%,
+        rgba(250,250,247,0.95) 46%, rgba(250,250,247,0.60) 60%,
+        rgba(250,250,247,0.20) 80%, rgba(250,250,247,0) 100%);
+    }
+    .hero-content {
+      position: relative; z-index: 2; width: 100%;
+      max-width: 1200px; margin: 0 auto; padding: 90px 5%;
+    }
+    .hero-text {
       display: flex; flex-direction: column; justify-content: center;
-      padding: 80px 5% 80px 10%;
+      max-width: 580px;
     }
     .hero-badge {
       display: inline-flex; align-items: center; gap: 8px;
@@ -126,20 +141,11 @@
     }
     .hstat-num { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: var(--dark); line-height: 1; margin-bottom: 4px; }
     .hstat-label { font-size: 11px; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.5px; }
-    .hero-right { position: relative; overflow: hidden; }
-    .hero-img {
-      width: 100%; height: 100%; object-fit: cover; display: block;
-      min-height: 600px;
-    }
-    .hero-img-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to right, rgba(250,250,247,0.12) 0%, transparent 40%);
-    }
     .hero-float {
-      position: absolute; bottom: 40px; left: -20px;
+      position: absolute; z-index: 3; bottom: 48px; right: 48px;
       background: var(--white); border: 1px solid var(--border);
       border-radius: var(--radius-lg); padding: 16px 20px;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
       min-width: 180px;
     }
     .hero-float-label { font-size: 10px; color: var(--text-3); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
@@ -403,13 +409,16 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
-      .hero { grid-template-columns: 1fr; }
-      .hero-right { display: none; }
-      .hero-left { padding: 80px 5%; text-align: center; }
-      .hero-sub { max-width: none; }
+      .hero-scrim {
+        background: linear-gradient(180deg, rgba(250,250,247,0.93) 0%, rgba(250,250,247,0.86) 100%);
+      }
+      .hero-content { padding: 80px 5%; }
+      .hero-text { max-width: none; align-items: center; text-align: center; }
+      .hero-sub { max-width: 520px; }
       .hero-btns { justify-content: center; }
       .hero-stats { justify-content: center; }
       .hero-badge { margin-left: auto; margin-right: auto; }
+      .hero-float { display: none; }
       .leistungen-grid { grid-template-columns: 1fr 1fr; }
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
     }
@@ -468,29 +477,29 @@
 
 <!-- HERO -->
 <section class="hero" id="start">
-  <div class="hero-left">
-    <div class="hero-badge">Ihr Plameco-Partner in Lüneburg</div>
-    <h1>Neue Decke.<br/><em>In einem Tag.</em></h1>
-    <p class="hero-sub">Professionelle Spanndecken für Ihr Zuhause oder Büro – ohne Dreck, ohne Lärm. Möbel bleiben stehen. Fertig, bevor der Tag endet.</p>
-    <div class="hero-btns">
-      <a href="#kontakt" class="btn-dark">Kostenlose Beratung →</a>
-      <a href="tel:041318540452" class="btn-outline">📞 04131 854 04 52</a>
-    </div>
-    <div class="hero-stats">
-      <div><div class="hstat-num">1 Tag</div><div class="hstat-label">Montage</div></div>
-      <div><div class="hstat-num">40+</div><div class="hstat-label">Jahre</div></div>
-      <div><div class="hstat-num">5,0 ★</div><div class="hstat-label">Google</div></div>
-      <div><div class="hstat-num">100%</div><div class="hstat-label">Zufriedenheit</div></div>
+  <img src="img/raum1.png" alt="Moderner Wohnraum mit Spanndecke aus Lüneburg" class="hero-bg" />
+  <div class="hero-scrim"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge">Ihr Plameco-Partner in Lüneburg</div>
+      <h1>Neue Decke.<br/><em>In einem Tag.</em></h1>
+      <p class="hero-sub">Professionelle Spanndecken für Ihr Zuhause oder Büro – ohne Dreck, ohne Lärm. Möbel bleiben stehen. Fertig, bevor der Tag endet.</p>
+      <div class="hero-btns">
+        <a href="#kontakt" class="btn-dark">Kostenlose Beratung →</a>
+        <a href="tel:041318540452" class="btn-outline">📞 04131 854 04 52</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="hstat-num">1 Tag</div><div class="hstat-label">Montage</div></div>
+        <div><div class="hstat-num">40+</div><div class="hstat-label">Jahre</div></div>
+        <div><div class="hstat-num">5,0 ★</div><div class="hstat-label">Google</div></div>
+        <div><div class="hstat-num">100%</div><div class="hstat-label">Zufriedenheit</div></div>
+      </div>
     </div>
   </div>
-  <div class="hero-right">
-    <img src="img/raum1.png" alt="Moderner Wohnraum mit Spanndecke" class="hero-img" />
-    <div class="hero-img-overlay"></div>
-    <div class="hero-float">
-      <div class="hero-float-label">Fertig in</div>
-      <div class="hero-float-val">einem Tag ✓</div>
-      <div class="hero-float-sub">Möbel bleiben stehen</div>
-    </div>
+  <div class="hero-float">
+    <div class="hero-float-label">Fertig in</div>
+    <div class="hero-float-val">einem Tag ✓</div>
+    <div class="hero-float-sub">Möbel bleiben stehen</div>
   </div>
 </section>
 
